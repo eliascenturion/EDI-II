@@ -1,0 +1,299 @@
+*{
+  margin:0;
+  padding:0;
+}
+:root{
+  --fondo: #DBEEFF;
+  --button: #66BBFF;
+  --border: #66BBFF;
+  --title: #66BBFF;
+  --dividers: #66BBFF;
+  --textos: #999999;
+}
+body{
+  font-family: 'Arial', sans-serif;
+  width: 250px;
+  margin:10% auto;
+  
+}
+body.login-page, body.resgister-page{
+  border: 2px var(--textos) solid;
+}
+
+p{
+  color: var(--textos);
+}
+.login-page main, .resgister-page main{
+padding: 10px;
+}
+.login >header>h2, .resgister>header>h2{
+  margin-top:0px; 
+}
+.login h2, .resgister h2{
+  color: var(--title);
+  border-bottom: 3px var(--title) solid;
+  margin: 10px 0px 10px 0px;
+  
+}
+.login-page .ingreso label, .resgister-page .ingreso label{
+  color: var(--textos);
+  display: block;
+  margin-left: 10px;
+  margin-bottom: 5px;
+}
+.login-page .ingreso input, .resgister-page .ingreso input{
+  display: block;
+  height: 20px;
+  width: 90%;
+  margin: 0px 10px 0px 10px;
+}
+#form input , #form-register input {
+  margin:10px 0px 10px 0px;
+}
+.btn-azul {
+  background-color: var(--title);;
+  border:0;
+  padding: 10px;
+  font-size: 18px;
+  border-radius: 10px;
+  color: #fff;
+  margin-left: 10px;
+}
+#form-register button{
+  margin:0px auto 0px auto; 
+  display: inherit;
+}
+
+
+body.page{
+  width: 1024px;
+  height: auto;
+  margin:50px auto;
+}
+nav {
+  float: right;
+}
+nav .cart-icon{
+  width: 50px;
+}
+.page header *{
+  display: inline-block;
+  list-style: none;
+  vertical-align: middle;
+}
+.page header .cart-icon{
+  width: 50px;
+  height: 50px;
+  margin-left: 20px;
+}
+.page header{
+  background-color: var(--fondo);
+  border: 2px var(--border) solid;
+}
+nav a{
+  text-decoration: none;
+  color: var(--textos);
+}
+nav ul{
+  margin-top: revert;
+  margin-right: 20px;
+}
+nav ul li{
+  margin: 0px 5px 0px 5px;
+}
+body.page h3.title{
+  color: var(--title);
+  border-bottom: 2px var(--border) solid;
+  margin-top: 10px;
+}
+body.page h3{
+  color: var(--title);
+}
+.contact{
+  display: inline-block;
+  border: 1px solid var(--textos);
+  margin-top: 10px ;
+  width: 20%;
+  text-align: center;
+  vertical-align: top;
+}
+.contact > form >header{
+  background-color: #fff;
+  border: 1px solid var(--textos);
+  border-top: 0 ;
+  border-right: 0;
+  border-left: 0;
+  padding: 10px 0px 10px 0px;
+}
+.contact nav{
+  text-align: start;
+  margin-left: 10px;
+  margin-top: 10px;
+  float: none;
+}
+.contact>nav>p{
+  color: var(--textos);
+  margin: 5px 0px ;
+}
+.contact .btn-azul{
+  width: 90%;
+  margin: 10px 10px 10px 10px;
+}
+section.messages{
+  display: inline-block;
+  width: 78%;
+  margin-top: 10px;
+  float: right;
+}
+section.messages header{
+  border: 1px solid var(--textos);
+  background-color: #fff;
+  text-align: center;
+  padding: 8px 0px;
+}
+section.messages footer{
+  border: 1px solid var(--textos);
+}
+section.messages footer p{
+  color: var(--title);
+  font-weight: 600;
+  text-align: end;
+  width: 90%;
+  display: inline-block;
+  vertical-align: bottom;
+}
+section.messages footer>ion-icon{
+  display: inline-block;
+  width: 5%;
+  height: 32px;
+}
+
+section.messages main{
+  border-left: 1px solid var(--textos);
+  border-right: 1px solid var(--textos);
+  text-align: center;
+}
+section.messages main > p{
+  color: var(--textos);
+} 
+section.messages p{
+  padding:10px;
+}
+.main{
+  width: 100%;
+  display: inline-block;
+}
+aside.envio{
+  border: 0;
+  display: inline-block;
+  width: 20%;
+  vertical-align: top;
+}
+aside.envio h3{
+  border: 1px solid var(--textos);
+  margin: 5px 0px;
+  padding: 0px 5px;
+}
+section.select{
+display: inline-block;
+width: 78%;
+}
+section.select select{
+  width: 100%;
+}
+section.envio{
+  display: inline-block;
+  width: 79%;
+  margin: 5px 0px;
+  float: right;
+}
+section.envio header{
+  background-color: #fff;
+  border: 0;
+}
+section.envio header select{
+  width: 100%;
+  padding: 4px;
+  border-radius: 5px;
+  
+}
+section.envio header select {
+  background-image:url("../img/circle-down.png"); /*aquí deberás escribir la ruta de la imagen que utilizarás como flecha del desplegable*/
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: 20px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+}
+section.envio header select::-ms-expand {
+  display: none; /*Evita que se muestre la flecha por defecto en versiones de IE*/
+}
+section.envio article {
+  margin-top: 5px;
+  text-align: center;
+}
+section.envio article p{
+  color: var(--textos);
+}
+section.envio > form > article > main > textarea{
+  width: 788px;
+  height: 280px;
+  resize: unset;
+  padding: 10px;
+} 
+section.envio button{
+  float: right;
+  margin: 5px 0px;
+  width: 150px;
+}
+aside.buscar{
+  margin-top: 5px;
+}
+aside.buscar h3{
+  display:inline-block;
+  border: 1px solid #000;
+  padding: 3px 37px 3px 3px;
+}
+aside.buscar input{
+  width: 70%;
+  height: 25px;
+  padding-left: 5px;
+  padding-top: 3px;
+  
+}
+aside.buscar input::placeholder{
+  color: var(--title);
+  font-size: 20px;
+  padding: 0;
+}
+aside.buscar button{
+  width: 156px;
+  padding: 6px;
+}
+section.buscar{
+  margin-top: 10px;
+  width: 100%;
+  border: 1px solid #000;
+}
+section.buscar h3{
+  text-align: center;
+  border-bottom: 1px solid #000;
+  padding: 6px 0px;
+}
+
+section.buscar article >ul >li{
+  list-style: none;
+  margin-top: 2px;
+  padding:2px 0px 2px 5px;
+  color:var(--textos);
+}
+section.buscar article >ul >li:hover{
+  background-color: var(--fondo);
+}
+section.buscar ~ button{
+  margin-top: 5px;
+  float: right;
+  width: 156px;
+}
