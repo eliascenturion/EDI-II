@@ -7,6 +7,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login</title>
   <link rel="stylesheet" href="css/style.css">
+  <script type="text/javascript" src="js/init.js"></script>
+  <script type="text/javascript" src="js/buscar.js"></script>
 </head>
 
 <body class="page">
@@ -24,30 +26,34 @@
   <h3 class="title">Buscar</h3>
   <main class="main">
     <aside class="buscar">
-      <form action="">
+      <form id="buscar">
         <h3>Contacto</h3>
-        <input type="text">
+        <input type="text" id="contacto">
         <button class="btn-azul" type="submit">Buscar</button>
       </form>
     </aside>
+    <div id="alerta">
+      
+    </div>
     <section class="buscar">
       <h3>Resultado</h3>
       <article>
-        <ul>
-          <li>Juna Perez</li>
-          <li>Juna Perez</li>
-          <li>Juna Perez</li>
-          <li>Juna Perez</li>
+        <ul class="result">
+
         </ul>
       </article>
     </section>
-    <button onclick="mensaje()" class="btn-azul" type="submit">Agregar</button>
+    <button id="agregar" class="btn-azul" type="submit">Agregar</button>
   </main>
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
   <script>
-    function mensaje() {
-      alert("entra a la funcion para agregar contacto.")
+    window.addEventListener("load",verificar_login);
+    function verificar_login(){
+        let user = JSON.parse(localStorage.getItem("data"));
+        if(user === null){
+            document.location = "index.html";
+        }
     }
   </script>
 </body>

@@ -56,6 +56,15 @@
   </main>
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script>
+    window.addEventListener("load",verificar_login);
+    function verificar_login(){
+        let user = JSON.parse(localStorage.getItem("data"));
+        if(user === null){
+            document.location = "index.html";
+        }
+    }
+  </script>
 </body>
 
 </html>

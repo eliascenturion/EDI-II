@@ -297,3 +297,7 @@ section.buscar ~ button{
   float: right;
   width: 156px;
 }
+
+.active{
+  background-color: var(--fondo);
+}
