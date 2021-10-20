@@ -1,13 +1,3 @@
-function ajax(type,api){
-    console.log("entre");
-    event.preventDefault();
-    var xmlhttp = new XMLHttpRequest();
-    xmlhttp.onreadystatechange = funcionSubmit;
-    xmlhttp.open(type, 'http://santiagots-001-site5.dtempurl.com/api/'+api, true);
-    //xmlhttp.setRequestHeader("Content-Type","application/json");
-    xmlhttp.send();
-
-}
 function funcionSubmit(event){
     var xmlhttp = event.target;
     if (xmlhttp.readyState == 4){
@@ -19,7 +9,7 @@ function funcionSubmit(event){
 }
 
 function saveUser(data){
-    localStorage.setItem("data", data);
+    localStorage.setItem("data",data);
 }
 
 window.addEventListener("load",cargadoOK);
