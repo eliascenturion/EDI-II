@@ -1,6 +1,5 @@
 window.addEventListener("load",get_contacts);
 window.addEventListener("load",search);
-
 function get_contacts() {
 	let contact = JSON.parse(localStorage.getItem("data"));
 	var nav = document.querySelector("ul.result");
@@ -21,7 +20,7 @@ function search(){
       let post = '';
       let contacto = document.querySelector("#contacto").value;
       if(contacto != ""){
-        ajax("get","Contactos/Nombre/"+contacto , post);
+        ajax("get","Contactos/Nombre/"+contacto ,post,"");
       }else{
         alert("Ingrese un id de contacto.");
       }
@@ -57,6 +56,7 @@ function funcionSubmit(event){
   var xmlhttp = event.target;
   if (xmlhttp.readyState == 4){
     if (xmlhttp.status == 200){
+      console.log("asdasda");
       view_search(xmlhttp.responseText);
     }else if(xmlhttp.status == 201){
       window.history.back();
