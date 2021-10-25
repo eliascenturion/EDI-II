@@ -33,6 +33,7 @@
       <form id="envioMensaje">
         <header>
           <select name="mensajePara" id="para">
+            <option value="0">Seleccione un contacto</option>
           </select>
         </header>
         <article>
@@ -43,6 +44,8 @@
         <button class="btn-azul" type="submit">Enviar</button>
       </form>
     </section>
+    <section id="error" class="envio">
+    </section>
   </main>
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
@@ -51,7 +54,7 @@
     function verificar_login(){
         let user = JSON.parse(localStorage.getItem("data"));
         if(user === null){
-            document.location = "index.html";
+          document.location = "index.html";
         }
     }
   </script>

@@ -301,3 +301,14 @@ section.buscar ~ button{
 .active{
   background-color: var(--fondo);
 }
+
+.error-rojo{
+  margin-top: 10px;
+  padding: 5px;
+  background-color: #DB2843;
+}
+.confirm-verde{
+  margin-top: 10px;
+  padding: 5px;
+  background-color: #33a64c;
+}

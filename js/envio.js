@@ -1,6 +1,6 @@
 window.addEventListener("load",get_contacts);
 function get_contacts() {
-	let user = JSON.parse(localStorage.getItem("info"));
+	let user = JSON.parse(localStorage.getItem("data"));
 	ajax("get", "Usuarios/"+user.id,"",save_data);
 	let contact = JSON.parse(localStorage.getItem("info"));
 	var select = document.querySelector("#para");
@@ -25,10 +25,25 @@ function envioMensaje(id){
 
 	let json = {
 		"texto" : envio,
-		"idDestinatario" : envio,
-		"idRemitente" : id,
+		"idDestinatario" : parseInt(para),
+		"idRemitente" : parseInt(id)
 	}
-
-	ajax("post","mensajes",json,"");
+	if(para != "" && envio != ""){
+		ajax("post","mensajes",json);
+	}else if(para == "" || para == 0){
+		mostrar_Error("Seleccione un contacto para enviar el mensaje",1);
+	}else if(envio == ""){
+		mostrar_Error("El mensaje no puede ser vacio",1);
+	}
 	
+}
+
+function funcionSubmit(event){
+  var xmlhttp = event.target;
+  if (xmlhttp.readyState == 4){
+    if (xmlhttp.status == 201){
+      console.log(xmlhttp.responseText);
+			mostrar_Error("El mensaje se envio con exito",0);
+    }
+  }
 }

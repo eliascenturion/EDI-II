@@ -4,6 +4,8 @@ function funcionSubmit(event){
         if (xmlhttp.status == 201){
             saveUser(xmlhttp.responseText);
             location.href = "mensajes.html";
+        }else{
+            mostrar_Error("El usuario y/o contraseña ingresadas son incorrectas",1);
         }
     }
 }
@@ -19,7 +21,11 @@ function cargadoOK(){
         e.preventDefault()
         let user = document.querySelector("#usuario").value;
         let pass = document.querySelector("#clave").value;
-        ajax("get","Usuarios/"+user+"/"+pass);
+        if( user != "" && pass != ""){
+            ajax("get","Usuarios/"+user+"/"+pass,"","");
+        }else{
+            mostrar_Error("Los campos no pueden ser vacios",1);
+        }
     });
 }
 
